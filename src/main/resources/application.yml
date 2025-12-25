@@ -1,0 +1,24 @@
+#spring:
+#  datasource:
+#    url: jdbc:sqlserver://school.database.windows.net:1433;database=school
+#    username: adminfahim
+#    password: adminadmin1@
+#    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring:
+  cloud:
+    azure:
+      keyvault:
+        secret:
+          property-sources:
+            - endpoint: https://learningjava-kv.vault.azure.net/
+
+  datasource:
+    url: ${sqldburl}
+    username: ${sqldbusername}
+    password: ${sqldbpassword}
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
