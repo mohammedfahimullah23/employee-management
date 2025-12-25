@@ -32,7 +32,7 @@ jobs:
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
     - name: Login to ACR
-      run: az acr login --name myacr
+      run: az acr login --name crlearningdev
 
     - name: Build & Push Image
       run: |
