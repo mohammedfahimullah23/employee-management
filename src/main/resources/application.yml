@@ -4,6 +4,12 @@
 #    username: adminfahim
 #    password: adminadmin1@
 #    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+azure:
+  function:
+    base-url: https://azurefunctions-1766754802726.azurewebsites.net
+    process-employee-path: /api/employees/process
+    timeout-ms: 10000
+
 spring:
   cloud:
     azure:
@@ -11,6 +17,8 @@ spring:
         secret:
           property-sources:
             - endpoint: https://learningjava-kv.vault.azure.net/
+
+
 
   datasource:
     url: ${sqldburl}
@@ -22,3 +30,5 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+
+

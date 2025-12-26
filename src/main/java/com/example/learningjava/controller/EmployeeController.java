@@ -23,10 +23,16 @@ public class EmployeeController {
         return service.create(emp);
     }
 
+    @PostMapping("/functions/create")
+    public Employee createEmployeeViaFunctions(@RequestBody Employee emp) {
+        return service.createFromAzureFunctions(emp);
+    }
+
     @GetMapping("/dummy")
     public List<String> test() {
         return List.of("hiiiisss");
     }
+
 
     @GetMapping
     public List<Employee> getAll() {
